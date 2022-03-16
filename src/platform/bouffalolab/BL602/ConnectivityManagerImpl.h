@@ -59,6 +59,7 @@ class ConnectivityManagerImpl final : public ConnectivityManager,
     // Allow the ConnectivityManager interface class to delegate method calls to
     // the implementation methods provided by this class.
     friend class ConnectivityManager;
+
 public:
     static WiFiStationState mWiFiStationState;
 

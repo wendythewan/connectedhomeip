@@ -30,9 +30,9 @@
 #include "BLEManagerImpl.h"
 
 #include <ble/CHIPBleServiceData.h>
-#include <platform/internal/BLEManager.h>
 #include <lib/support/CodeUtils.h>
 #include <lib/support/logging/CHIPLogging.h>
+#include <platform/internal/BLEManager.h>
 
 extern "C" {
 // #include <portmacro.h>
