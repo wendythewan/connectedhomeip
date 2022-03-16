@@ -86,7 +86,7 @@ void event_cb_wifi_event(input_event_t *event, void *private_data)
                 aos_now_ms(),
                 WIFI_SCAN_DONE_EVENT_OK == event->value ? "OK" : "Busy now"
             );
-        } 
+        }
         break;
         case CODE_WIFI_ON_CONNECTING:
         {

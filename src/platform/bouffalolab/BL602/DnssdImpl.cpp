@@ -164,21 +164,21 @@ int mdns_responder_ops(struct netif *netif)
     int ret, slot = -1;
 	int protocol = 0;
     uint16_t packet_len = 0;
-   
+
     if (netif == NULL) {
         log_info("netif is NULL\r\n");
         return -1;
     }
 
 	mdns.netif = netif;
-   
+
     ret = mdns_resp_add_netif(netif, glservice->mHostName, 10);
     if (ret != 0) {
         mdns_resp_deinit();
         log_info("add netif failed:%d\r\n", ret);
         return -1;
-    }  
-	
+    }
+
 	items = static_cast<mdns_txt_item_t *>(chip::Platform::MemoryCalloc(glservice->mTextEntrySize, sizeof(mdns_txt_item_t)));
 
 	for (size_t i = 0; i < glservice->mTextEntrySize; i++) {
@@ -214,11 +214,11 @@ int mdns_responder_ops(struct netif *netif)
         log_info("ota mdns fail.\r\n");
     }
 
-    return slot; 
-} 
+    return slot;
+}
 
 static err_t mdns_responder_start_netifapi_errt_fn(struct netif *netif)
-{   
+{
     return mdns_responder_ops(netif);
 }
 
@@ -254,7 +254,7 @@ CHIP_ERROR ChipDnssdPublishService(const DnssdService * service, DnssdPublishCal
 
 CHIP_ERROR ChipDnssdRemoveServices()
 {
-    //netifapi_netif_common(mdns.netif, NULL, mdns_responder_stop_netifapi_errt_fn);	
+    //netifapi_netif_common(mdns.netif, NULL, mdns_responder_stop_netifapi_errt_fn);
 	return CHIP_NO_ERROR;
 }
 

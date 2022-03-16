@@ -74,7 +74,7 @@ void ConnectivityManagerImpl::WifiStationStateChange(void)
     ChipDeviceEvent event;
 
     if (ConnectivityManagerImpl::mWiFiStationState == ConnectivityManager::kWiFiStationState_Connected) {
-        event.Type = DeviceEventType::kWiFiConnectivityChange;    
+        event.Type = DeviceEventType::kWiFiConnectivityChange;
         event.WiFiConnectivityChange.Result = kConnectivity_Established;
         PlatformMgr().PostEventOrDie(&event);
     }

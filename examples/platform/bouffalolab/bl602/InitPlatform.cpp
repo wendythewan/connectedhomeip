@@ -38,7 +38,7 @@ extern "C" {
 #include <easyflash.h>
 #include <hal_board.h>
 #include <hal_boot2.h>
-#include <wifi_mgmr_ext.h>    
+#include <wifi_mgmr_ext.h>
 #include <aos/kernel.h>
 #include <aos/yloop.h>
 #include <event_device.h>

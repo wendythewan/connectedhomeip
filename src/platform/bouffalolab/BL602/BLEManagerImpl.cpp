@@ -133,7 +133,7 @@ static void bt_enable_cb(int err)
     log_info("err: %d\r\n", err);
     if (!err)
     {
-        log_info("trace\r\n");         
+        log_info("trace\r\n");
         // ble_cli_register();
         // log_info("trace\r\n");
     }
